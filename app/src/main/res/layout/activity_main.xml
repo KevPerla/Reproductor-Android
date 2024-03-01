@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LISTA DE CANCIONES"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/fondo2"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewSong"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageViewSong"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/font1"
+        android:textSize="22sp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/textViewArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSongName"
+        android:layout_toEndOf="@id/imageViewSong"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/fondo2"
+        android:fontFamily="@font/font1"
+        android:textSize="20sp"
+        android:text=""/>
+
+    <ImageButton
+        android:id="@+id/imageButtonPlayPause"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/imageViewSong"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:background="@color/fondo"
+        android:src="@drawable/boton_reproducir" />
+
+    <TextView
+        android:id="@+id/textViewNowPlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageButtonPlayPause"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="227dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/font1"
+        android:textColor="@color/fondo2"
+        android:text=""/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewNowPlaying"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>
